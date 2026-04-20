@@ -11,6 +11,13 @@ const theoryHTML = `
             <span class="sub-arrow">▼</span>
         </div>
         <div class="sub-section-content" id="sub-section-0">
+            <div class="lesson-audio">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="toggleAudio(event, 'audio-0')" id="btn-audio-0">▶</button>
+                    <audio id="audio-0" preload="none"><source src="audio/01-verbe.mp3" type="audio/mpeg"></audio>
+                </div>
+                <span class="lesson-audio-label">🔊 Ascultă secțiunea</span>
+            </div>
             <div class="theory-box">
                 <h4>Definiție</h4>
                 <p><strong>Der Umzug</strong> (pl. <em>die Umzüge</em>) = mutatul într-o locuință nouă.</p>
@@ -39,6 +46,13 @@ const theoryHTML = `
             <span class="sub-arrow">▼</span>
         </div>
         <div class="sub-section-content" id="sub-section-1">
+            <div class="lesson-audio">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="toggleAudio(event, 'audio-1')" id="btn-audio-1">▶</button>
+                    <audio id="audio-1" preload="none"><source src="audio/02-etaje.mp3" type="audio/mpeg"></audio>
+                </div>
+                <span class="lesson-audio-label">🔊 Ascultă secțiunea</span>
+            </div>
             <p>O casă germană are de obicei <strong>5 niveluri</strong>, de jos în sus:</p>
             <table class="theory-table">
                 <thead><tr><th>Germană</th><th>Română</th><th>Poziție</th></tr></thead>
@@ -70,6 +84,13 @@ const theoryHTML = `
             <span class="sub-arrow">▼</span>
         </div>
         <div class="sub-section-content" id="sub-section-2">
+            <div class="lesson-audio">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="toggleAudio(event, 'audio-2')" id="btn-audio-2">▶</button>
+                    <audio id="audio-2" preload="none"><source src="audio/03-camere.mp3" type="audio/mpeg"></audio>
+                </div>
+                <span class="lesson-audio-label">🔊 Ascultă secțiunea</span>
+            </div>
             <table class="theory-table">
                 <thead><tr><th>Germană</th><th>Română</th><th>Ce găsim aici</th></tr></thead>
                 <tbody>
@@ -98,6 +119,13 @@ const theoryHTML = `
             <span class="sub-arrow">▼</span>
         </div>
         <div class="sub-section-content" id="sub-section-3">
+            <div class="lesson-audio">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="toggleAudio(event, 'audio-3')" id="btn-audio-3">▶</button>
+                    <audio id="audio-3" preload="none"><source src="audio/04-mobila-schlafzimmer.mp3" type="audio/mpeg"></audio>
+                </div>
+                <span class="lesson-audio-label">🔊 Ascultă secțiunea</span>
+            </div>
             <table class="theory-table">
                 <thead><tr><th>Germană</th><th>Română</th><th>Unde e</th></tr></thead>
                 <tbody>
@@ -124,6 +152,13 @@ const theoryHTML = `
             <span class="sub-arrow">▼</span>
         </div>
         <div class="sub-section-content" id="sub-section-4">
+            <div class="lesson-audio">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="toggleAudio(event, 'audio-4')" id="btn-audio-4">▶</button>
+                    <audio id="audio-4" preload="none"><source src="audio/05-mobila-wohnzimmer.mp3" type="audio/mpeg"></audio>
+                </div>
+                <span class="lesson-audio-label">🔊 Ascultă secțiunea</span>
+            </div>
             <table class="theory-table">
                 <thead><tr><th>Germană</th><th>Română</th></tr></thead>
                 <tbody>
@@ -156,6 +191,13 @@ const theoryHTML = `
             <span class="sub-arrow">▼</span>
         </div>
         <div class="sub-section-content" id="sub-section-5">
+            <div class="lesson-audio">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="toggleAudio(event, 'audio-5')" id="btn-audio-5">▶</button>
+                    <audio id="audio-5" preload="none"><source src="audio/06-elektrogerate.mp3" type="audio/mpeg"></audio>
+                </div>
+                <span class="lesson-audio-label">🔊 Ascultă secțiunea</span>
+            </div>
             <table class="theory-table">
                 <thead><tr><th>Germană</th><th>Română</th><th>Unde e</th></tr></thead>
                 <tbody>
@@ -183,70 +225,84 @@ const theoryHTML = `
             <span class="sub-arrow">▼</span>
         </div>
         <div class="sub-section-content" id="sub-section-6">
+            <div class="lesson-audio">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="toggleAudio(event, 'audio-6')" id="btn-audio-6">▶</button>
+                    <audio id="audio-6" preload="none"><source src="audio/07-dialog.mp3" type="audio/mpeg"></audio>
+                </div>
+                <span class="lesson-audio-label">🔊 Ascultă dialogul complet (MP3, după ce înregistrezi)</span>
+            </div>
+
+            <div style="background: #eff6ff; border: 2px dashed #3b82f6; padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+                <button onclick="playFullDialog()" style="background:#3b82f6;color:white;border:none;padding:10px 18px;border-radius:8px;cursor:pointer;font-weight:600;">🎙️ Redă tot dialogul (TTS)</button>
+                <button onclick="stopDialog()" style="background:#ef4444;color:white;border:none;padding:10px 18px;border-radius:8px;cursor:pointer;font-weight:600;">⏹ Stop</button>
+                <small style="color:#6b7280;">Voce germană automată din browser. Click pe 🔊 lângă orice replică pentru a o asculta individual.</small>
+            </div>
+
             <p style="margin-bottom: 15px;"><em>Anna și Peter se mută într-o casă nouă. Anna îl întâmpină pe Peter, care îi ajută cu mutatul.</em></p>
 
             <div style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #065f46;">Anna:</strong> Hallo Peter! Willkommen in meinem neuen Haus!</p>
+                <p><strong style="color: #065f46;">Anna:</strong> Hallo Peter! Willkommen in meinem neuen Haus! <button onclick="speakDialogLine(event, 0)" title="Ascultă" style="background:#10b981;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Salut Peter! Bine ai venit în casa mea nouă!</p>
             </div>
 
             <div style="background: #dbeafe; border-left: 4px solid #3b82f6; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #1e3a8a;">Peter:</strong> Hallo Anna! Schön! Wo soll ich die Kartons hinstellen?</p>
+                <p><strong style="color: #1e3a8a;">Peter:</strong> Hallo Anna! Schön! Wo soll ich die Kartons hinstellen? <button onclick="speakDialogLine(event, 1)" title="Ascultă" style="background:#3b82f6;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Salut Anna! Frumos! Unde pun cutiile?</p>
             </div>
 
             <div style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #065f46;">Anna:</strong> Die Bücher kommen ins Wohnzimmer, bitte. Und die Kleidung ins Schlafzimmer.</p>
+                <p><strong style="color: #065f46;">Anna:</strong> Die Bücher kommen ins Wohnzimmer, bitte. Und die Kleidung ins Schlafzimmer. <button onclick="speakDialogLine(event, 2)" title="Ascultă" style="background:#10b981;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Cărțile merg în living, te rog. Și hainele în dormitor.</p>
             </div>
 
             <div style="background: #dbeafe; border-left: 4px solid #3b82f6; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #1e3a8a;">Peter:</strong> Und der Schrank? Er ist sehr schwer!</p>
+                <p><strong style="color: #1e3a8a;">Peter:</strong> Und der Schrank? Er ist sehr schwer! <button onclick="speakDialogLine(event, 3)" title="Ascultă" style="background:#3b82f6;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Și dulapul? E foarte greu!</p>
             </div>
 
             <div style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #065f46;">Anna:</strong> Der Schrank kommt ins Schlafzimmer. Ich helfe dir!</p>
+                <p><strong style="color: #065f46;">Anna:</strong> Der Schrank kommt ins Schlafzimmer. Ich helfe dir! <button onclick="speakDialogLine(event, 4)" title="Ascultă" style="background:#10b981;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Dulapul merge în dormitor. Te ajut!</p>
             </div>
 
             <div style="background: #dbeafe; border-left: 4px solid #3b82f6; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #1e3a8a;">Peter:</strong> Wo ist die Küche?</p>
+                <p><strong style="color: #1e3a8a;">Peter:</strong> Wo ist die Küche? <button onclick="speakDialogLine(event, 5)" title="Ascultă" style="background:#3b82f6;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Unde e bucătăria?</p>
             </div>
 
             <div style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #065f46;">Anna:</strong> Hier rechts. Der Kühlschrank steht schon da, aber der Herd ist noch nicht da.</p>
+                <p><strong style="color: #065f46;">Anna:</strong> Hier rechts. Der Kühlschrank steht schon da, aber der Herd ist noch nicht da. <button onclick="speakDialogLine(event, 6)" title="Ascultă" style="background:#10b981;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Aici la dreapta. Frigiderul e deja acolo, dar aragazul încă nu.</p>
             </div>
 
             <div style="background: #dbeafe; border-left: 4px solid #3b82f6; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #1e3a8a;">Peter:</strong> Und das Badezimmer? Wo ist das?</p>
+                <p><strong style="color: #1e3a8a;">Peter:</strong> Und das Badezimmer? Wo ist das? <button onclick="speakDialogLine(event, 7)" title="Ascultă" style="background:#3b82f6;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Și baia? Unde e?</p>
             </div>
 
             <div style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #065f46;">Anna:</strong> Oben, im ersten Stock. Die Treppe ist dort.</p>
+                <p><strong style="color: #065f46;">Anna:</strong> Oben, im ersten Stock. Die Treppe ist dort. <button onclick="speakDialogLine(event, 8)" title="Ascultă" style="background:#10b981;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Sus, la etajul 1. Scara e acolo.</p>
             </div>
 
             <div style="background: #dbeafe; border-left: 4px solid #3b82f6; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #1e3a8a;">Peter:</strong> Super. Wo ist der Keller?</p>
+                <p><strong style="color: #1e3a8a;">Peter:</strong> Super. Wo ist der Keller? <button onclick="speakDialogLine(event, 9)" title="Ascultă" style="background:#3b82f6;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Super. Unde e pivnița?</p>
             </div>
 
             <div style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #065f46;">Anna:</strong> Unten, durch diese Tür. Die Waschmaschine steht im Keller.</p>
+                <p><strong style="color: #065f46;">Anna:</strong> Unten, durch diese Tür. Die Waschmaschine steht im Keller. <button onclick="speakDialogLine(event, 10)" title="Ascultă" style="background:#10b981;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Jos, prin ușa asta. Mașina de spălat e în pivniță.</p>
             </div>
 
             <div style="background: #dbeafe; border-left: 4px solid #3b82f6; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #1e3a8a;">Peter:</strong> Perfekt! Wir können anfangen. Was machen wir zuerst?</p>
+                <p><strong style="color: #1e3a8a;">Peter:</strong> Perfekt! Wir können anfangen. Was machen wir zuerst? <button onclick="speakDialogLine(event, 11)" title="Ascultă" style="background:#3b82f6;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Perfect! Putem începe. Ce facem mai întâi?</p>
             </div>
 
             <div style="background: #f0fdf4; border-left: 4px solid #10b981; padding: 15px 20px; border-radius: 6px; margin-bottom: 10px;">
-                <p><strong style="color: #065f46;">Anna:</strong> Zuerst das Sofa ins Wohnzimmer, dann das Bett ins Schlafzimmer. Danke für deine Hilfe!</p>
+                <p><strong style="color: #065f46;">Anna:</strong> Zuerst das Sofa ins Wohnzimmer, dann das Bett ins Schlafzimmer. Danke für deine Hilfe! <button onclick="speakDialogLine(event, 12)" title="Ascultă" style="background:#10b981;color:white;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:13px;margin-left:4px;vertical-align:middle;">🔊</button></p>
                 <p style="color: #6b7280; font-style: italic; font-size: 0.9rem;">Întâi canapeaua în living, apoi patul în dormitor. Mulțumesc pentru ajutor!</p>
             </div>
 
@@ -271,6 +327,13 @@ const theoryHTML = `
             <span class="sub-arrow">▼</span>
         </div>
         <div class="sub-section-content" id="sub-section-7">
+            <div class="lesson-audio">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="toggleAudio(event, 'audio-7')" id="btn-audio-7">▶</button>
+                    <audio id="audio-7" preload="none"><source src="audio/08-prepozitii.mp3" type="audio/mpeg"></audio>
+                </div>
+                <span class="lesson-audio-label">🔊 Ascultă secțiunea</span>
+            </div>
             <div class="theory-box">
                 <h4>📍 Prepoziții de loc — unde?</h4>
                 <table class="theory-table">
@@ -314,3 +377,60 @@ document.addEventListener('DOMContentLoaded', function() {
         container.innerHTML = theoryHTML;
     }
 });
+
+// ============================================
+// DIALOG — TEXT-TO-SPEECH (voce germană automată)
+// ============================================
+const dialogLines = [
+    "Hallo Peter! Willkommen in meinem neuen Haus!",
+    "Hallo Anna! Schön! Wo soll ich die Kartons hinstellen?",
+    "Die Bücher kommen ins Wohnzimmer, bitte. Und die Kleidung ins Schlafzimmer.",
+    "Und der Schrank? Er ist sehr schwer!",
+    "Der Schrank kommt ins Schlafzimmer. Ich helfe dir!",
+    "Wo ist die Küche?",
+    "Hier rechts. Der Kühlschrank steht schon da, aber der Herd ist noch nicht da.",
+    "Und das Badezimmer? Wo ist das?",
+    "Oben, im ersten Stock. Die Treppe ist dort.",
+    "Super. Wo ist der Keller?",
+    "Unten, durch diese Tür. Die Waschmaschine steht im Keller.",
+    "Perfekt! Wir können anfangen. Was machen wir zuerst?",
+    "Zuerst das Sofa ins Wohnzimmer, dann das Bett ins Schlafzimmer. Danke für deine Hilfe!"
+];
+
+function speakDialogLine(event, index) {
+    if (event) event.stopPropagation();
+    const line = dialogLines[index];
+    if (!line) return;
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(line);
+        u.lang = 'de-DE';
+        u.rate = 0.9;
+        // Pitch alternant: Anna (linii pare) mai înalt, Peter (linii impare) mai jos
+        u.pitch = index % 2 === 0 ? 1.15 : 0.85;
+        window.speechSynthesis.speak(u);
+    } else {
+        alert('Browser-ul tău nu suportă Text-to-Speech. Folosește Chrome, Edge sau Safari.');
+    }
+}
+
+function playFullDialog() {
+    if (!('speechSynthesis' in window)) {
+        alert('Browser-ul tău nu suportă Text-to-Speech. Folosește Chrome, Edge sau Safari.');
+        return;
+    }
+    window.speechSynthesis.cancel();
+    dialogLines.forEach((line, i) => {
+        const u = new SpeechSynthesisUtterance(line);
+        u.lang = 'de-DE';
+        u.rate = 0.9;
+        u.pitch = i % 2 === 0 ? 1.15 : 0.85;
+        window.speechSynthesis.speak(u);
+    });
+}
+
+function stopDialog() {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+    }
+}
